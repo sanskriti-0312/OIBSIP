@@ -1,104 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restraunt website</title>
+    <title>Temperature Converter</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
-<body>  
-    <nav class="navbar">
-        <div class="navbar-container container">
-            <input type="checkbox">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><a href=#showcase>Home</a></li>
-                <li><a href=#about>About</a></li>
-                <li><a href=#food>Category</a></li>
-                <li><a href=#food-menu>Menu</a></li>
-                <li><a href=#testimonial>Testimonial</a></li>
-                <li><a href=#Contact>Contact</a></li>
-            </ul>
-            
-            <h1 class="logo">PJ</h1>
-        </div>
-    </nav>
-    <section class="showcase-area" id="showcase">
-        <div class="showcase-container">
-            <h1 class="main-title">Eat Right Food</h1>
-            <p>Eat healthy food,it is good for health.</p>
-            <a href="#food-menu" class="btn btn-primary">Menu</a>
 
-        </div>
-        
-
-    </section>
-
-    <section id="about">
-        <div class="about-wrapper container">
-            <div class="about-text">
-                <p class="small">About Us</p>
-                <h2>We've been Making Healthy Food for Last 10 Years</h2>
-                <p>Healthy food does not have merely one but numerous benefits. It helps us in various spheres of life. Healthy food 
-                    does not only impact our physical health but mental health too. When we intake healhty fruits and vegetables that
-                    are full of nutrients, we reduce the cahnces of disease.
-                </p>
-            </div>
-            
-            <div class="about-img">
-                <img src="about-photo.jpg" alt="About Us">
+<body>
+    <div class="container">
+        <div class="task-bar">
+            <div id="p1"></div>
+            <div class="icons">
+                <i class="bi bi-bell-slash-fill"></i>
+                <i class="bi bi-bluetooth"></i>
+                <i class="bi bi-battery-charging"></i>
             </div>
         </div>
-
-    </section>
-    <section id="food">
-        <h2>Types Of Food</h2>
-        <div class="food-container container">
-            <div class="food-type fruit">
-                <div class="image-container">
-                    <img src="food1.jpg" alt="Fruits">
-                    <div class="img-content">
-                        <h3>Fruit</h3>
-                        <a href="https://www.britannica.com/science/fruit-plant-reproductive-body" class="btn btn-primary" target="_blank">Learn More</a>
-                         
-                    </div>
-
+        <h1>Temperature Converter</h1>
+        <div class="inputs">
+            <div style="display: flex;
+            flex-direction: column;">
+                <label for="degree">Value <span id="small">(In Numbers...)</span></label>
+                <input type="number" name="degree" id="inputValue" required>
+            </div>
+            <div class="inptsss">
+                <div>
+                    <label for="type">From</label>
+                    <select name="type" id="type1">
+                        <option value="celcius">Celcius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                        <option value="rankine">Rankine</option>
+                    </select>
                 </div>
-              
-                 
-
-            </div>
-            <div class="food-type veg">
-                <div class="image-container">
-                    <img src="food2.jpg" alt="Vegetable">
-                    <div class="img-content">
-                        <h3>Vegetables</h3>
-                        <a href="https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/vegetables-and-fruits/" class="btn btn-primary" target="_blank">Learn More</a>
-                         
-                    </div>
+                <div>
+                    <label for="type">To</label>
+                    <select name="type" id="type2">
+                        <option value="celcius">Celcius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                        <option value="rankine">Rankine</option>
+                    </select>
                 </div>
-
             </div>
-            <div class="food-type grain">
-                <div class="image-container">
-                    <img src="food3.jpg" alt="Grains">
-                    <div class="img-content">
-                        <h3>Grains</h3>
-                        <a href="https://education.nationalgeographic.org/resource/grain/" class="btn btn-primary" target="_blank">Learn More</a>
-                    </div>
-
-                </div>
-
-            </div>
-            
-
         </div>
-    </section>
+        <button type="submit" id="btn" onclick="temperature()">Convert</button>
+        <div class="resultss">
+            <label for="result">Result</label>
+            <div id="result"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Designed by Soham Dalal</a></p>
+    </div>
+    <script src="main.js"></script>
 </body>
+
 </html>
